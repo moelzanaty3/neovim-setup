@@ -15,11 +15,12 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Common plugins shared between VSCode and regular Neovim
 local common_plugins = {
+  'github/copilot.vim',
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   require 'plugins.treesitter',
-  require 'plugins.indent_line', 
+  require 'plugins.indent_line',
   require 'plugins.todo-comments',
-  require 'plugins.autopairs'
+  require 'plugins.autopairs',
 }
 
 -- Additional plugins for regular Neovim only
@@ -34,7 +35,7 @@ local neovim_plugins = {
   require 'plugins.lint',
   require 'plugins.neo-tree',
   require 'plugins.gitsigns', -- adds gitsigns recommend keymaps
-  require 'plugins.tokyo-night-theme'
+  require 'plugins.tokyo-night-theme',
 }
 
 if vim.g.vscode then
